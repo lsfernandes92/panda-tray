@@ -1,0 +1,24 @@
+{
+  "name": "panda_tray",
+  "version": "1.0.0",
+  "description": "Animated panda tray icon that appears on the menu bar of macOS systems.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsfernandes92/panda_tray.git"
+  },
+  "keywords": [],
+  "author": "Lucas Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsfernandes92/panda_tray/issues"
+  },
+  "homepage": "https://github.com/lsfernandes92/panda_tray#readme",
+  "devDependencies": {
+    "electron": "^32.2.0"
+  }
+}
