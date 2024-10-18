@@ -1,24 +1,52 @@
 {
-  "name": "panda_tray",
-  "version": "1.0.0",
+  "name": "panda-tray-app",
+  "author": "Lucas Fernandes <pix.variosonrails@gmail.com> (https://lsfernandes92.github.io/portifolio/)",
+  "version": "0.1.0",
   "description": "Animated panda tray icon that appears on the menu bar of macOS systems.",
   "main": "main.js",
+  "build": {
+    "appId": "com.variosonrails.pandatray",
+    "productName": "PandaTray",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "deb"
+    }
+  },
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "dist": "electron-builder build --win --mac --linux"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lsfernandes92/panda_tray.git"
   },
   "keywords": [],
-  "author": "Lucas Fernandes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lsfernandes92/panda_tray/issues"
   },
   "homepage": "https://github.com/lsfernandes92/panda_tray#readme",
   "devDependencies": {
-    "electron": "^32.2.0"
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
