@@ -4,10 +4,10 @@ const path = require("path");
 let tray = null;
 
 const icons = [
-  path.join(__dirname, "./assets/panda-sleeping0.png"),
-  path.join(__dirname, "./assets/panda-sleeping1.png"),
-  path.join(__dirname, "./assets/panda-sleeping2.png"),
-  path.join(__dirname, "./assets/panda-sleeping3.png"),
+  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda0.png"),
+  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda1.png"),
+  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda2.png"),
+  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda3.png"),
 ];
 
 let currentFrame = 0;
@@ -20,6 +20,8 @@ function updateTrayIcon() {
 }
 
 app.whenReady().then(() => {
+  app.dock.hide();
+
   tray = new Tray(icons[0]);
 
   setInterval(updateTrayIcon, 200);
@@ -29,6 +31,6 @@ app.whenReady().then(() => {
     { label: "Quit", click: () => { app.quit(); } }
   ]);
 
-  tray.setToolTip("Animated panda.")
+  tray.setToolTip("PandaTray")
   tray.setContextMenu(contextMenu)
 })
