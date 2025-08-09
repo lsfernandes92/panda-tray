@@ -31,6 +31,6 @@ app.whenReady().then(() => {
     { label: "Quit", click: () => { app.quit(); } }
   ]);
 
-  tray.setToolTip("PandaTray")
+  tray.setToolTip("Pandinhe")
   tray.setContextMenu(contextMenu)
 })

@@ -12,11 +12,11 @@ open /path/to/YourApp.app
 ## Starting an Electron app:
 
 ```shell
-open dist/mac-arm64/PandaTray.app
+open dist/mac-arm64/Pandinhe.app
 ```
 
 ## Starting an Electron app and see the logs:
 
 ```shell
-./dist/mac-arm64/PandaTray.app/Contents/MacOS/PandaTray 
+./dist/mac-arm64/Pandinhe.app/Contents/MacOS/Pandinhe 
 ```
