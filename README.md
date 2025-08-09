@@ -1,4 +1,4 @@
-# PandaTray
+# Pandinhe
 
 An animated sleeping panda tray icon, built with Electron, that appears on the macOS menu bar.
 

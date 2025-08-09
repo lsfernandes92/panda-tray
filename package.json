@@ -1,12 +1,12 @@
 {
-  "name": "panda-tray-app",
-  "author": "Lucas Fernandes <pix.variosonrails@gmail.com> (https://lsfernandes92.github.io/portifolio/)",
+  "name": "pandinhe",
+  "author": "Lucas Fernandes (https://lsfernandes92.github.io/portifolio/)",
   "version": "0.1.0",
-  "description": "Animated panda tray icon that appears on the menu bar of macOS systems.",
+  "description": "An animated sleeping panda tray icon, built with Electron, that appears on the macOS menu bar.",
   "main": "main.js",
   "build": {
-    "appId": "com.variosonrails.pandatray",
-    "productName": "PandaTray",
+    "appId": "com.jaggiesweekly.pandinhe",
+    "productName": "Pandinhe",
     "win": {
       "target": "nsis"
     },
@@ -19,10 +19,12 @@
   },
   "scripts": {
     "start": "electron-forge start",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "dist": "electron-builder build --win --mac --linux"
+    "dist": "electron-builder build --win --mac --linux",
+    "dist:mac": "electron-builder build --mac",
+    "dist:linux": "electron-builder build --linux",
+    "dist:win": "electron-builder build --win"
   },
   "repository": {
     "type": "git",
