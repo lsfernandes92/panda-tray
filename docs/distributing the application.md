@@ -31,6 +31,12 @@ Run the following on the console:
 npm run dist
 ```
 
+You can also build for MacOS only:
+
+```shell
+npm run dist:mac
+```
+
 This will create a `dist` folder on the root of your project. There you will find the installables for each OS specified in your npm script's dist command.
 
 
