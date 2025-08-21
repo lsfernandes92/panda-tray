@@ -5,25 +5,15 @@ There are two options for packaging and distributing the application:
 > [!IMPORTANT]
 > The preceding commands are run using Node 18
 
-
-
-
-## Using Electron Forge
-
-This command successfully generated the MacOS distribution but haven't explored Windows and Linux packaging yet.
-
-Run the following on the console:
-
-```shell
-npm run make
-```
+> [!NOTE]
+> Although the preceding commands successfully generated the MacOS package, its functionality on Windows and Linux remains unexplored.
 
 
 
 
 ## Using third-party tool
 
-This is a community-maintained alternative tool for packaging. The above command is configured to create distributables for MacOS, Windows, and Linux operating systems.
+This is a community-maintained alternative tool for packaging. The following command is configured to create distributables for MacOS, Windows, and Linux operating systems.
 
 Run the following on the console:
 
@@ -31,13 +21,35 @@ Run the following on the console:
 npm run dist
 ```
 
-You can also build for MacOS only:
+You can also build for a specific operating system only (linux|mac|windows):
 
 ```shell
-npm run dist:mac
+npm run dist:<OPERATING_SYSTEM>
 ```
 
-This will create a `dist` folder on the root of your project. There you will find the installables for each OS specified in your npm script's dist command.
+This will create a `dist` folder on the root of your project. There you will find the installable.
+
+
+
+
+## Using Electron Forge
+
+Electron Forge build packages for the platform you're running it on. If you specifically want to build for multiple platforms, you might want to [use third-party tool](#using-third-party-tool).
+
+Run the following on the console:
+
+```shell
+npm run make
+```
+
+This will create a `out` folder on the root of your project. There you will find the installables for each OS.
+
+
+
+
+## Starting the application
+
+See [how to start the app from the terminal](./docs/how%20to%20start%20the%20app%20from%20the%20terminal.md)
 
 
 
