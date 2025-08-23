@@ -23,6 +23,9 @@ The most straightforward way to run the application. It directly runs the source
 
 ### Install dependencies
 
+> [!IMPORTANT]
+> The preceding commands are run using Node 18
+
   ```bash
   npm install
   ```
@@ -52,6 +55,9 @@ This method involves creating a standalone application package. While it takes m
   ```
 
 ### Install dependencies
+
+> [!IMPORTANT]
+> The preceding commands are run using Node 18
 
   ```bash
   npm install
