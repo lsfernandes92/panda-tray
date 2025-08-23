@@ -57,8 +57,10 @@ This method involves creating a standalone application package. While it takes m
   npm install
   ```
 
-And then check these resources:
+### Distributing the application
 
-See [distributing the application](./distributing%20the%20application.md)
+See [distributing the application](./distributing%20the%20application.md).
+
+### How to start the application from the terminal
 
 See [how to start the app from the terminal](./how%20to%20start%20the%20app%20from%20the%20terminal.md).

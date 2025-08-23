@@ -45,7 +45,7 @@ folder.
 
 ### Building from source
 
-See [cloning the repo and build the application](./docs/cloning%20the%20repo%20and%20building%20the%20application.md).
+See [cloning the repo and build the application](./docs/cloning%20the%20repo%20and%20build%20the%20application.md).
 
 
 
