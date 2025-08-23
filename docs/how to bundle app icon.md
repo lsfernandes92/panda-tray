@@ -1,4 +1,5 @@
 # How to bundle application icon
+
 ## For MacOS
 
 To change the application's global icon you need an `.icns` file. Once you have your icon file the new icon should appear in finder, dock, system dialogs, application switcher (⌘+Tab).
@@ -49,6 +50,7 @@ npm run make
 
 
 ## FAQ
+
 ### Why multiple icon resolutions?
 
 That's because MacOS requires multiple resolutions of your icon for Retina/HiDPI displays. This requires two versions of each icon size, the standard resolution and the retina/HiDPI version.

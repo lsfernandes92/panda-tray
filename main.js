@@ -5,10 +5,9 @@ let tray = null;
 let aboutWindow = null;
 
 const icons = [
-  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda0.png"),
-  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda1.png"),
-  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda2.png"),
-  path.join(__dirname, "./assets/sleeping_panda/sleeping_panda3.png"),
+  path.join(__dirname, "./assets/sprawling_panda/sprawling_panda0.png"),
+  path.join(__dirname, "./assets/sprawling_panda/sprawling_panda1.png"),
+  path.join(__dirname, "./assets/sprawling_panda/sprawling_panda2.png"),
 ];
 
 let currentFrame = 0;
@@ -45,7 +44,6 @@ function createAboutWindow() {
 
   aboutWindow.loadFile(path.join(__dirname, './src/about.html'));
 
-  // Handle about window close events
   aboutWindow.on('close', (event) => { 
     event.preventDefault();
     aboutWindow.hide();
@@ -53,7 +51,6 @@ function createAboutWindow() {
   });
   aboutWindow.on('closed', () => { aboutWindow = null; });
 
-  // Handle external links
   aboutWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
     return { action: 'deny' };

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon.svg" alt="Pandinhe" width="180" height="180"/>
+  <img src="assets/icon_v2.svg" alt="Pandinhe" width="180" height="180"/>
 </p>
 <p align="center">
   <a href="">
@@ -28,8 +28,11 @@ with Electron.
 
 ### Requirements 
 
-This app requires MacOS **10.15** (Catalina) or **later**. Additionally, it
-requires **Node 18** or **higher**.
+This app requires MacOS **10.15** (Catalina) or **later** and
+**Node 18** or **higher**.
+
+
+
 
 ### Manual download
 
@@ -37,9 +40,12 @@ requires **Node 18** or **higher**.
 appropriate for your system, open and drag the application to the "Applications"
 folder.
 
+
+
+
 ### Building from source
 
-See [cloning the repo and build the application](./docs/cloning%20the%20repo%20and%20distributing%20the%20application.md).
+See [cloning the repo and build the application](./docs/cloning%20the%20repo%20and%20building%20the%20application.md).
 
 
 

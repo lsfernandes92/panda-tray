@@ -5,12 +5,20 @@ series of PNG images, one for each frame of the animation. I used the following
 command in the console:
 
 ```shell
-convert panda-sleeping.gif panda-sleeping%01d.png
+magick sprawling_panda.gif sprawling_panda%d.png
 ```
 
 To enhance image quality, I subsequently optimized each generated PNG file using
 the following command:
 
 ```shell
-pngquant --quality=65-80 panda-sleeping3.png -o panda-sleeping3.png -f
+# Use brace expansion for specific numbers
+pngquant --quality=65-80 sprawling_panda{0,1,2}.png --ext=.png -f
+```
+
+or
+
+```shell
+# Use a wildcard pattern
+pngquant --quality=65-80 sprawling_panda*.png --ext=.png -f
 ```
