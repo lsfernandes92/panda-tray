@@ -7,11 +7,20 @@
   "build": {
     "appId": "com.jaggiesweekly.pandinhe",
     "productName": "Pandinhe",
+    "icon": "assets/icon.icns",
     "win": {
       "target": "nsis"
     },
     "mac": {
       "target": "dmg"
+    },
+    "dmg": {
+      "title": "Pandinhe",
+      "backgroundColor": "#fff8dc",
+      "window": {
+        "width": 540,
+        "height": 380
+      }
     },
     "linux": {
       "target": "deb"
