@@ -1,17 +1,26 @@
 {
-  "name": "pandinhe",
+  "name": "Pandinhe",
   "author": "Lucas Fernandes (https://lsfernandes92.github.io/portifolio/)",
-  "version": "0.1.0",
-  "description": "An animated sleeping panda tray icon, built with Electron, that appears on the macOS menu bar.",
+  "version": "1.0.0",
+  "description": "An animated sleeping panda tray icon, built with Electron, that appears on the MacOS menu bar.",
   "main": "main.js",
   "build": {
     "appId": "com.jaggiesweekly.pandinhe",
     "productName": "Pandinhe",
+    "icon": "assets/icon.icns",
     "win": {
       "target": "nsis"
     },
     "mac": {
       "target": "dmg"
+    },
+    "dmg": {
+      "title": "Pandinhe",
+      "backgroundColor": "#fff8dc",
+      "window": {
+        "width": 540,
+        "height": 380
+      }
     },
     "linux": {
       "target": "deb"
@@ -22,8 +31,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "dist": "electron-builder build --win --mac --linux",
-    "dist:mac": "electron-builder build --mac",
     "dist:linux": "electron-builder build --linux",
+    "dist:mac": "electron-builder build --mac",
     "dist:win": "electron-builder build --win"
   },
   "repository": {
