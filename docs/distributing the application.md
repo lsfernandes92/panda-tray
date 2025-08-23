@@ -49,7 +49,7 @@ This will create a `out` folder on the root of your project. There you will find
 
 ## Starting the application
 
-See [how to start the app from the terminal](./how%20to%20start%20the%20app%20from%20the%20terminal.md)
+See [how to start the app from the terminal](./how%20to%20start%20the%20app%20from%20the%20terminal.md).
 
 
 
