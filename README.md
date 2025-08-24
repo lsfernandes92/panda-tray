@@ -28,8 +28,7 @@ with Electron.
 
 ### Requirements 
 
-This app requires MacOS **10.15** (Catalina) or **later** and
-**Node 18** or **higher**.
+This app requires MacOS **10.15** (Catalina) or **later**.
 
 
 
