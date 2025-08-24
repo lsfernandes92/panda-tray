@@ -1,4 +1,11 @@
-const { app, Tray, Menu, nativeImage, BrowserWindow, shell } = require("electron")
+const {
+  app,
+  Tray,
+  Menu,
+  nativeImage,
+  BrowserWindow,
+  shell,
+} = require("electron");
 const path = require("path");
 
 let tray = null;
@@ -13,8 +20,9 @@ const icons = [
 let currentFrame = 0;
 
 function updateTrayIcon() {
-  let currentFrameImage = nativeImage.createFromPath(icons[currentFrame]).resize({ width: 32, height: 32 });
-
+  let currentFrameImage = nativeImage
+    .createFromPath(icons[currentFrame])
+    .resize({ width: 32, height: 32 });
   tray.setImage(currentFrameImage);
   currentFrame = (currentFrame + 1) % icons.length;
 }
@@ -33,29 +41,32 @@ function createAboutWindow() {
     minimizable: false,
     // maximizable: false,
     // fullscreenable: false,
-    titleBarStyle: 'hidden',
+    titleBarStyle: "hidden",
     title: "About Pandinhe",
-    icon: path.join(__dirname, './assets/icon.png'),
+    icon: path.join(__dirname, "./assets/icon.png"),
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+    },
+  });
+
+  aboutWindow.loadFile(path.join(__dirname, "./src/about.html"));
+
+  aboutWindow.on("close", (event) => {
+    if (!app.isQuitting) {
+      event.preventDefault();
+      aboutWindow.hide();
     }
   });
-
-  aboutWindow.loadFile(path.join(__dirname, './src/about.html'));
-
-  aboutWindow.on('close', (event) => { 
-    event.preventDefault();
-    aboutWindow.hide();
-    aboutWindow = null; 
-  });
-  aboutWindow.on('closed', () => { aboutWindow = null; });
+  aboutWindow.on("closed", () => { aboutWindow = null; });
 
   aboutWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
-    return { action: 'deny' };
+    return { action: "deny" };
   });
 }
+
+app.on("before-quit", () => { app.isQuitting = true; });
 
 app.whenReady().then(() => {
   app.dock.hide();
@@ -65,11 +76,23 @@ app.whenReady().then(() => {
   setInterval(updateTrayIcon, 200);
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: "ℹ︎  About...", click: createAboutWindow },
+    { 
+      label: "ℹ︎  About...", 
+      click: () => {
+        if (aboutWindow) {
+          aboutWindow.show();
+        } else {
+          createAboutWindow();
+        }
+      }
+    },
     { type: "separator" },
-    { label: "⏻  Quit", click: () => { app.quit(); } }
+    {
+      label: "⏻  Quit",
+      click: () => { app.quit(); },
+    },
   ]);
 
-  tray.setToolTip("Pandinhe")
-  tray.setContextMenu(contextMenu)
-})
+  tray.setToolTip("Pandinhe");
+  tray.setContextMenu(contextMenu);
+});
