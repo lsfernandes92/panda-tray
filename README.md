@@ -35,7 +35,9 @@ This app requires MacOS **10.15** (Catalina) or **later**.
 
 ### Manual download
 
-[Download latest version](https://github.com/lsfernandes92/panda-tray/releases/latest), unzip and open the **Pandinhe.app** file.
+[Download latest version](https://github.com/lsfernandes92/panda-tray/releases/latest)
+of the **Pandinhe.zip** file from the assets section. Unzipping will give you
+**Pandinhe.app**. Double-click and you’re off!
 
 
 
